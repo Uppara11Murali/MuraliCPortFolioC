@@ -61,6 +61,7 @@ window.addEventListener("scroll", () => {
 });
 
 // ======== Contact Form Submission (optional alert) ========
+
 function sendMessage(event) {
   event.preventDefault();
   const name = document.getElementById("name").value.trim();

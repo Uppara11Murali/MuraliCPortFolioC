@@ -471,6 +471,33 @@
   });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("8kiNKDRfW4jqK-202");
+  })();
+
+  function sendMessage(event) {
+    event.preventDefault();
+
+    const params = {
+      from_name: document.getElementById("name").value,
+      from_email: document.getElementById("email").value,
+      message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_qwyq53p", "template_3s4b336", params)
+      .then(() => {
+        alert("✅ Message sent successfully!");
+        document.querySelector(".contact-form").reset();
+      })
+      .catch((error) => {
+        console.error("❌ Error:", error);
+        alert("Failed to send message. Please try again later.");
+      });
+  }
+</script>
+
 
 </body>
 </html>
