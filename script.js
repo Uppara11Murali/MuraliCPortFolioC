@@ -1,77 +1,74 @@
-// ======== Navbar Toggle (for mobile) ========
-const menuToggle = document.getElementById("menu-toggle");
-const navbar = document.getElementById("navbar");
+// === Mobile Navbar Toggle ===
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.getElementById('navbar');
 
-// Toggle navbar visibility on small screens
-menuToggle.addEventListener("click", () => {
-  navbar.classList.toggle("active");
-  menuToggle.classList.toggle("active");
+menuToggle.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+  menuToggle.classList.toggle('open');
 });
 
-// ======== Close Navbar When Clicking a Link (Mobile) ========
-const navLinks = document.querySelectorAll("#navbar ul li a");
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    navbar.classList.remove("active");
-    menuToggle.classList.remove("active");
+// Close menu when clicking a link
+document.querySelectorAll('#navbar a').forEach(link => {
+  link.addEventListener('click', () => {
+    navbar.classList.remove('active');
+    menuToggle.classList.remove('open');
   });
 });
 
-// ======== Sticky Header on Scroll ========
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  header.classList.toggle("scrolled", window.scrollY > 50);
-});
-
-// ======== Smooth Scroll Behavior ========
+// === Smooth Scroll ===
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href");
-    if (targetId.startsWith("#")) {
-      e.preventDefault();
-      const targetSection = document.querySelector(targetId);
-      if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop - 60,
-          behavior: "smooth"
-        });
-      }
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 60,
+        behavior: "smooth",
+      });
     }
   });
 });
 
-// ======== Active Link Highlight on Scroll ========
-window.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll("section[id]");
-  const scrollPos = window.scrollY + 100;
-
-  sections.forEach(section => {
-    const id = section.getAttribute("id");
-    const link = document.querySelector(`nav ul li a[href="#${id}"]`);
-
-    if (
-      scrollPos >= section.offsetTop &&
-      scrollPos < section.offsetTop + section.offsetHeight
-    ) {
-      link?.classList.add("active");
-    } else {
-      link?.classList.remove("active");
-    }
-  });
-});
-
-// ======== Contact Form Submission (optional alert) ========
+// === Contact Form (Send Email using EmailJS) ===
+// Step 1: Go to https://www.emailjs.com/
+// Step 2: Create an account → Add a new Email Service (Gmail)
+// Step 3: Create an Email Template (with name, email, message fields)
+// Step 4: Copy your Service ID, Template ID, and Public Key
+// Step 5: Replace the placeholders below 👇
 
 function sendMessage(event) {
   event.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
 
-  if (name && email && message) {
-    alert(`✅ Thank you, ${name}! Your message has been sent.`);
-    event.target.reset();
-  } else {
-    alert("⚠️ Please fill out all fields before submitting.");
+  // Get form data
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  if (!name || !email || !message) {
+    alert("Please fill all fields before submitting.");
+    return;
   }
+
+  // Your EmailJS credentials
+  const serviceID = "service_uqbzxiy"; // e.g., service_xxxxxxx
+  const templateID = "template_gttdqhq"; // e.g., template_yyyyyyy
+  const publicKey = "8kiNKDRfW4jqK-202"; // e.g., sXyzAbC12345
+
+  // Initialize EmailJS
+  emailjs.init(publicKey);
+
+  // Send email
+  emailjs.send(serviceID, templateID, {
+    name: name,
+    email: email,
+    message: message,
+  })
+  .then(() => {
+    alert("✅ Message sent successfully! I’ll get back to you soon.");
+    document.querySelector(".contact-form").reset();
+  })
+  .catch((error) => {
+    console.error("Email send error:", error);
+    alert("❌ Oops! Something went wrong. Please try again later.");
+  });
 }
