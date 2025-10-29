@@ -6,22 +6,19 @@
   <title>MuraliPortfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-  
 </head>
 <body>
   <!-- Header / Navbar -->
-<!-- Header / Navbar -->
   <header>
     <div class="logo">Uppara <span>Murali</span></div>
-
     <!-- Hamburger Menu -->
     <div class="menu-toggle" id="menu-toggle">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
-
     <nav id="navbar">
       <ul>
         <li><a href="#home" class="active">Home</a></li>
@@ -35,9 +32,6 @@
       </ul>
     </nav>
   </header>
-
-  
-  <!-- Hero Section -->
   <!-- Home / Hero Section -->
   <section id="home" class="hero">
     <div class="hero-container">
@@ -51,7 +45,6 @@
         </p>
         <a href="#projects" class="btn">View My Work</a>
       </div>
-
       <div class="hero-image">
         <img src="murali.jpg" alt="Uppara Murali">
       </div>
@@ -60,67 +53,59 @@
 
 
   <!-- About Section -->
-<section id="about" class="about">
-  <div class="about-container">
-
-    <div class="about-content">
-      <h2>About Me</h2>
-      <p>
-        Hi, I’m <strong>Uppara Murali</strong> — a passionate <strong>Software Developer</strong>.  
-        I recently completed my <strong>B.Tech in Computer Science & Engineering</strong> 
-        from <strong>Bheema Institute of Technology & Science</strong>, Adoni.  
-        I enjoy solving real-world problems through technology, from designing clean, 
-        responsive websites to developing predictive analytics models in healthcare.
-      </p>
-      <p>
-        I’m currently exploring the intersection of <strong>Data Science</strong> and 
-        <strong>Software Development.</strong> 
-      </p>
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          Hi, I’m <strong>Uppara Murali</strong> — a passionate <strong>Software Developer</strong>.  
+          I recently completed my <strong>B.Tech in Computer Science & Engineering</strong> 
+          from <strong>Bheema Institute of Technology & Science</strong>, Adoni.  
+          I enjoy solving real-world problems through technology, from designing clean, 
+          responsive websites to developing predictive analytics models in healthcare.
+        </p>
+        <p>
+          I’m currently exploring the intersection of <strong>Data Science</strong> and 
+          <strong>Software Development.</strong> 
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="murali.jpg" alt="Uppara Murali">
+      </div>
     </div>
-
-    <div class="about-image">
-      <img src="murali.jpg" alt="Uppara Murali">
+    <div class="education-container">
+      <div class="about-card">
+        <h3>B.Tech</h3>
+        <ul>
+          <li><b>College:</b> BITS (Adoni)</li>
+          <li><b>Branch:</b> CSE</li>
+          <li><b>Percentage:</b> 80%</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h3>Intermediate</h3>
+        <ul>
+          <li><b>College:</b> Dr. Jyothirmayi Jr College (Adoni)</li>
+          <li><b>Group:</b> MPC</li>
+          <li><b>Percentage:</b> 86.7%</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h3>10<sup>th</sup></h3>
+        <ul>
+          <li><b>School:</b> Vindhya Sree EM High School (Adoni)</li>
+          <li><b>Percentage:</b> 90%</li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <div class="education-container">
-    <div class="about-card">
-      <h3>B.Tech</h3>
-      <ul>
-        <li><b>College:</b> BITS (Adoni)</li>
-        <li><b>Branch:</b> CSE</li>
-        <li><b>Percentage:</b> 80%</li>
-      </ul>
+    <div class="about-button">
+      <a href="#contact" class="btn">Get in Touch</a>
     </div>
-
-    <div class="about-card">
-      <h3>Intermediate</h3>
-      <ul>
-        <li><b>College:</b> Dr. Jyothirmayi Jr College (Adoni)</li>
-        <li><b>Group:</b> MPC</li>
-        <li><b>Percentage:</b> 86.7%</li>
-      </ul>
-    </div>
-
-    <div class="about-card">
-      <h3>10<sup>th</sup></h3>
-      <ul>
-        <li><b>School:</b> Vindhya Sree EM High School (Adoni)</li>
-        <li><b>Percentage:</b> 90%</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="about-button">
-    <a href="#contact" class="btn">Get in Touch</a>
-  </div>
-</section>
-
+  </section>
   <!-- Skills Section -->
   <section id="skills" class="skills">
     <h2>My Skills</h2>
     <p>Here are some of the technologies and tools I work with:</p>
-
     <div class="skills-container">
       <div class="skill">
         <h3>Web Devolopment</h3>
@@ -131,7 +116,6 @@
           <li>React.js</li>
         </ul>
       </div>
-
       <div class="skill">
         <h3>Backend Programing & DSA</h3>
         <ul>
@@ -140,7 +124,6 @@
           <li>Data Structure Algorithms</li>
         </ul>
       </div>
-
       <div class="skill">
         <h3>Database</h3>
         <ul>
@@ -148,7 +131,6 @@
           <li>MongoDB</li>
         </ul>
       </div>
-
       <div class="skill">
         <h3>Tools & Others</h3>
         <ul>
@@ -158,20 +140,16 @@
           <li>Eclipse</li>
         </ul>
       </div>
-
     </div>
     <div class="about-button">
       <a href="#home" class="btn">Back To Home</a>
     </div>
   </section>
-
     <!-- Internship Section -->
   <section id="internship" class="internship">
     <h2>Internship Experience</h2>
     <p>Here’s a glimpse of my hands-on professional experience and learning journey.</p>
-
     <div class="internship-container">
-
       <div class="internship-card">
         <h3>💼 Data Science Intern</h3>
         <h4>360DigiTMG — Hyderabad</h4>
@@ -188,7 +166,6 @@
           <li>-Improve technical & analytical skills through hands-on practice</li>
         </ul>
       </div>
-
       <div class="internship-card">
         <h3>🖥️ Web Development Intern</h3>
         <h4>Digital Bheem — Remote</h4>
@@ -204,7 +181,6 @@
           <li>-By Using Visual Studio tool.</li>
         </ul>
       </div>
-
       <div class="internship-card">
         <h3>Real-Time Python Development </h3>
         <h4>MSR Edusoft Private Limited — Remote</h4>
@@ -223,17 +199,11 @@
       <a href="#home" class="btn">Back To Home</a>
     </div>
   </section>
-
-
-
   <!-- Projects Section -->
   <section id="projects" class="projects">
     <h2>Projects</h2>
     <p>Here are some of my featured projects that showcase my skills and experience.</p>
-
-
     <div class="projects-container">
-
       <div class="project-card">
         <img src="opti.png" alt="Healthcare Supply Chain Optimizer">
         <div class="project-info">
@@ -245,7 +215,6 @@
           <a href="https://github.com/Uppara11Murali/Final_Year_B.techProject" class="btn">View Project</a>
         </div>
       </div>
-
       <div class="project-card">
         <img src="port.png" alt="Personal Portfolio Website">
         <div class="project-info">
@@ -257,19 +226,15 @@
           <a href="#" class="btn">View Project</a>
         </div>
       </div>
-
     </div>
     <div class="about-button">
       <a href="#home" class="btn">Back To Home</a>
     </div>
   </section>
-
   <!-- Certificates Section -->
   <section id="certificate" class="certificates">
     <h2>Certificates</h2>
     <p>Here are some of my professional certifications and achievements.</p>
-
-    
     <div class="certificate-container">
       <div class="certificate-card">
         <i class='bx bxs-certification'></i>
@@ -277,80 +242,74 @@
           <h3>Data Science</h3>
           <p><strong>Issued by:</strong> 360DigiTMG</p>
           <a href="Data.jpg" class="btn" target="_blank">
-              <img src="Data.jpg" alt="MSR Certificate" style="height:150px; width:auto;">
-              View Certificate
+            <img src="Data.jpg" alt="MSR Certificate" style="height:150px; width:auto;">
+            View Certificate
           </a>
         </div>
       </div>
-
       <div class="certificate-card">
         <i class='bx bxs-certification'></i>
         <div class="certificate-info">
           <h3>Web Development</h3>
           <p><strong>Issued by:</strong> Digital Bhem</p>
           <a href="MSR_Certificate.jpg" class="btn" target="_blank">
-              <img src="MSR_Certificate.jpg" alt="MSR Certificate" style="width:150px; height:auto;">
-              View Certificate
+            <img src="MSR_Certificate.jpg" alt="MSR Certificate" style="width:150px; height:auto;">
+            View Certificate
           </a>
         </div>
       </div>
-
       <div class="certificate-card">
         <i class='bx bxs-certification'></i>
         <div class="certificate-info">
           <h3>Real-Time Python Devolopment</h3>
           <p><strong>Issued by:</strong> MSR Edusoft Private Limited</p>
           <a href="di.png" class="btn" target="_blank">
-              <img src="di.png" alt="MSR Certificate" style="width:150px; height:auto;">
-              View Certificate
+            <img src="di.png" alt="MSR Certificate" style="width:150px; height:auto;">
+            View Certificate
           </a>
         </div>
       </div>
-
       <div class="certificate-card">
         <i class='bx bxs-certification'></i>
         <div class="certificate-info">
           <h3>Digital Image Processing</h3>
           <p><strong>Issued by:</strong> NPTL</p>
           <a href="digital_image_procesing_page-0001.jpg" class="btn" target="_blank">
-              <img src="digital_image_procesing_page-0001.jpg" alt="MSR Certificate" style="width:150px; height:auto;">
-              View Certificate
+            <img src="digital_image_procesing_page-0001.jpg" alt="MSR Certificate" style="width:150px; height:auto;">
+            View Certificate
           </a>
         </div>
       </div>
-
       <div class="certificate-card">
         <i class='bx bxs-certification'></i>
         <div class="certificate-info">
           <h3>Cloud Computing</h3>
           <p><strong>Issued by:</strong> NPTL</p>
           <a href="Cloud Computing_page-0001.jpg" class="btn" target="_blank">
-              <img src="Cloud Computing_page-0001.jpg" alt="MSR Certificate" style="width:150px; height:auto;">
-              View Certificate
+            <img src="Cloud Computing_page-0001.jpg" alt="MSR Certificate" style="width:150px; height:auto;">
+            View Certificate
           </a>
         </div>
       </div>
-
       <div class="certificate-card">
         <i class='bx bxs-certification'></i>
         <div class="certificate-info">
           <h3>Advanced Computer Architecture</h3>
           <p><strong>Issued by:</strong> NPTL</p>
           <a href="Advanced Computer Architecture_page-0001.jpg" class="btn" target="_blank">
-              <img src="Advanced Computer Architecture_page-0001.jpg" alt="MSR Certificate" style="width:150px; height:auto;">
-              View Certificate
+            <img src="Advanced Computer Architecture_page-0001.jpg" alt="MSR Certificate" style="width:150px; height:auto;">
+            View Certificate
           </a>
         </div>
       </div>
-
       <div class="certificate-card">
         <i class='bx bxs-certification'></i>
         <div class="certificate-info">
           <h3>Journal Certificate</h3>
           <p><strong>Issued by:</strong> IJMRSET</p>
           <a href="Murali_journal.jpg" class="btn" target="_blank">
-              <img src="Murali_journal.jpg" alt="MSR Certificate" style="height:150px; width:auto;">
-              View Certificate
+            <img src="Murali_journal.jpg" alt="MSR Certificate" style="height:150px; width:auto;">
+            View Certificate
           </a>
         </div>
       </div>
@@ -359,13 +318,10 @@
       <a href="#home" class="btn">Back To Home</a>
     </div>
   </section>
-
-
     <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Me</h2>
     <p>Let’s connect! Feel free to reach out for collaborations, internships, or project discussions.</p>
-
     <div class="contact-container">
       <div class="contact-info">
         <p><strong><i class='bx bxs-envelope' ></i></strong> <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">upparamurali57@gmail.com</a></p>
@@ -373,7 +329,6 @@
         <p><strong><i class='bx bxl-linkedin-square' ></i></strong> <a href="https://www.linkedin.com/in/uppara-murali-b03b83345/" target="_blank">linkedin Profile</a></p>
         <p><strong><i class='bx bxl-github' ></i></strong> <a href="https://github.com/Uppara11Murali" target="_blank">github Profile</a></p>
       </div>
-
       <form class="contact-form" onsubmit="sendMessage(event)">
         <input type="text" id="name" placeholder="Your Name" required>
         <input type="email" id="email" placeholder="Your Email" required>
@@ -385,8 +340,6 @@
       <a href="#home" class="btn">Back To Home</a>
     </div>
   </section>
-
-
   <!-- Footer -->
   <footer>
     <div class="footer-container">
@@ -398,106 +351,76 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
   <script defer src="script.js"></script>
   <!-- Cookie Consent Banner -->
-<div id="cookie-banner" style="
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: 15px 20px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  z-index: 9999;
-  font-size: 15px;
-  animation: fadeInUp 0.6s ease;
-">
-  <p style="margin: 0; flex: 1;">
-    🍪 This website uses cookies to ensure you get the best experience.
-    <a href="#privacy" style="color: #38bdf8; text-decoration: underline;">Learn more</a>
-  </p>
-  <button id="accept-cookies" style="
-    background: #38bdf8;
+  <div id="cookie-banner" style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.85);
     color: #fff;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  ">Accept</button>
-</div>
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    z-index: 9999;
+    font-size: 15px;
+    animation: fadeInUp 0.6s ease;">
+    <p style="margin: 0; flex: 1;">
+      🍪 This website uses cookies to ensure you get the best experience.
+      <a href="#privacy" style="color: #38bdf8; text-decoration: underline;">Learn more</a>
+    </p>
+    <button id="accept-cookies" style="
+      background: #38bdf8;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;">Accept</button>
+  </div>
 
-<!-- Inline Script -->
-<script>
-  // Smooth fade-in animation using CSS injection
-  const style = document.createElement('style');
-  style.innerHTML = `
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 600px) {
-      #cookie-banner {
-        flex-direction: column;
-        text-align: center;
+  <!-- Inline Script -->
+  <script>
+    // Smooth fade-in animation using CSS injection
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
       }
-    }
-  `;
-  document.head.appendChild(style);
+      @media (max-width: 600px) {
+        #cookie-banner {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    `;
+    document.head.appendChild(style);
 
-  // Cookie consent logic
-  document.addEventListener("DOMContentLoaded", function () {
-    const cookieBanner = document.getElementById("cookie-banner");
-    const acceptBtn = document.getElementById("accept-cookies");
+    // Cookie consent logic
+    document.addEventListener("DOMContentLoaded", function () {
+      const cookieBanner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
 
-    // Check if consent already given
-    if (localStorage.getItem("cookiesAccepted")) {
-      cookieBanner.style.display = "none";
-    }
+      // Check if consent already given
+      if (localStorage.getItem("cookiesAccepted")) {
+        cookieBanner.style.display = "none";
+      }
 
-    // On accept click
-    acceptBtn.addEventListener("click", () => {
-      localStorage.setItem("cookiesAccepted", "true");
-      cookieBanner.style.display = "none";
-    });
-  });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function() {
-    emailjs.init("8kiNKDRfW4jqK-202");
-  })();
-
-  function sendMessage(event) {
-    event.preventDefault();
-
-    const params = {
-      from_name: document.getElementById("name").value,
-      from_email: document.getElementById("email").value,
-      message: document.getElementById("message").value
-    };
-
-    emailjs.send("service_qwyq53p", "template_3s4b336", params)
-      .then(() => {
-        alert("✅ Message sent successfully!");
-        document.querySelector(".contact-form").reset();
-      })
-      .catch((error) => {
-        console.error("❌ Error:", error);
-        alert("Failed to send message. Please try again later.");
+      // On accept click
+      acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("cookiesAccepted", "true");
+        cookieBanner.style.display = "none";
       });
-  }
-</script>
-
-
+    });
+  </script>
 </body>
 </html>
